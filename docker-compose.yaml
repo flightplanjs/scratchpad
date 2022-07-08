@@ -19,17 +19,18 @@ services:
     logging: *default-logging
     build:
       context: ./result-app-ember
-  api:
-    logging: *default-logging
-    depends_on:
-      - db
-    build:
-      context: ./result-app-nest
+  # api:
+  #   logging: *default-logging
+  #   depends_on:
+  #     - db
+  #   build:
+  #     context: ./result-app-nest
   web:
     logging: *default-logging
     image: nginx
     depends_on:
-      - api
+      - ui
+      # - api
     ports:
       - "80:80"
       - "443:443"
