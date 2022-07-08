@@ -1,5 +1,5 @@
 export default class AppCore {
-  private message: string;
+  protected message: string;
 
   constructor(message: string) {
     this.message = message;

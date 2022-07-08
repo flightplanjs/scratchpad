@@ -1,12 +1,11 @@
 {
-  "name": "result-app-core",
+  "name": "result-app-db",
   "version": "1.0.0",
   "description": "",
   "main": "dist/main.js",
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "tsc",
-    "build:lib": "tsc",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
     "test": "jest",

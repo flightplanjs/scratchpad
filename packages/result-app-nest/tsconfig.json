@@ -1,0 +1,10 @@
+{
+  "extends": "../../tsconfig.json",
+
+  "compilerOptions": {
+    "rootDir": "./",
+    "outDir": "dist"
+  },
+
+  "references": [{ "path": "../result-app-core" }, { "path": "../result-app-db" }]
+}

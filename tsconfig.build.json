@@ -1,0 +1,8 @@
+{
+  "files": [],
+  "references": [
+    { "path": "packages/result-app-core" },
+    { "path": "packages/result-app-db" },
+    { "path": "packages/result-app-nest" }
+  ]
+}

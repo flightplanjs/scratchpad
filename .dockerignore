@@ -1,0 +1,7 @@
+Dockerfile
+
+**/*/dist
+**/*/tmp
+**/*/node_modules
+**/*.tsbuildinfo
+**/*/.env
