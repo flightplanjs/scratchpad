@@ -2,10 +2,12 @@
   "name": "starter-result-app",
   "version": "1.0.0",
   "description": "A sketchpad for what starter-kit-builder should output",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "private": true,
+  "workspaces": [
+    "result-app-core",
+    "result-app-nest",
+    "result-app-ember"
+  ],
   "author": "ryan.tablada@gmail.com",
   "license": "ISC"
 }
