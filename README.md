@@ -37,5 +37,5 @@ This will start all of the local services, but will only build a fresh copy of t
 The local dev setup is set to proxy to versions of the API/UI running on the host machine for fast development/debugging in a myriad of IDEs/workflows as well as faster file watching. However, versions of the UI and API are running in the local dev Docker environment to mimic production builds and to have a performant working backup running at all times even if you're not running instances on your host environment. These will be out of date from recent changes and must be rebuilt/restared manually. To rebuild then restart a service (in this example the ui service) run:
 
 ```sh
-docker compose build result-app-ui && docker compose up -d
+docker compose build ui && docker compose up -d
 ```

@@ -38,3 +38,5 @@ services:
       - ./dev.crt:/etc/certs/dev.crt
       - ./dev.key:/etc/certs/dev.key
       - ./local-dev/nginx.conf:/etc/nginx/conf.d/default.conf
+volumes:
+  npm_cache:
