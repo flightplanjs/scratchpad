@@ -6,5 +6,6 @@
     "outDir": "dist"
   },
 
+
   "references": [{ "path": "../result-app-core" }]
 }
