@@ -39,3 +39,12 @@ The local dev setup is set to proxy to versions of the API/UI running on the hos
 ```sh
 docker compose build ui && docker compose up -d
 ```
+
+### Building Core Libraries
+
+The shared node modules in `result-app-core` and `result-app-core` can use Typescript and have to be built separately than the API or UI.
+To watch these projects for changes run:
+
+```
+npm run build:lib:watch
+```

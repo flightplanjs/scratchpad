@@ -18,8 +18,8 @@ services:
   ui:
     logging: *default-logging
     build:
-      context: ./packages/result-app-ember
-      # dockerfile: ./packages/result-app-ember/Dockerfile
+      context: .
+      dockerfile: ./packages/result-app-ember/Dockerfile
   api:
     logging: *default-logging
     depends_on:
