@@ -1,10 +1,12 @@
 import { NestFactory } from '@nestjs/core';
-import { AppModule } from './app.module';
+import { AppModule } from './config/app.module';
 import { config as dotenv } from 'dotenv';
 
 async function bootstrap() {
   dotenv();
   const app = await NestFactory.create(AppModule);
+  app.setGlobalPrefix('api');
+
   await app.listen(process.env.SERVER_PORT ?? 5102);
 }
 bootstrap();
