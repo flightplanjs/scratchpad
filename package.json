@@ -18,7 +18,8 @@
     "prebuild": "rimraf \"packages/**/lib\" \"packages/**/*.tsbuildinfo\"",
     "build": "tsc -b tsconfig.build.json",
     "tsc:lib": "tsc -b tsconfig-lib.build.json",
-    "build:lib": "npm-run-all prebuild tsc:lib"
+    "build:lib": "npm-run-all prebuild tsc:lib",
+    "build:lib:watch": "npm-run-all prebuild \"tsc:lib -- --watch\""
   },
   "author": "ryan.tablada@gmail.com",
   "license": "ISC"
