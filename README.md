@@ -8,6 +8,7 @@ Update your `/etc/hosts` file to have the following lines:
 
 ```
 127.0.0.1	api.result-app.local
+127.0.0.1	mail.result-app.local
 127.0.0.1	result-app.local
 ```
 
@@ -48,3 +49,16 @@ To watch these projects for changes run:
 ```
 npm run build:lib:watch
 ```
+
+### Local Dev Services
+
+
+#### Mailcatcher
+
+For local development this startkit has a full mailcatcher instance setup in the docker compose stack.
+
+Visit https://mail.result-app.local to use the mailcatcher UI.
+
+To send mail from your host machine use `0.0.0.0:1025`.
+
+If you need to expose a different port to the host machine (if you have an existing `STMP` server running) the exposed port can be modified using `HOST_SMTP_PORT` in the `.env` file.

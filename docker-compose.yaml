@@ -8,6 +8,10 @@ x-logging:
     max-file: 2
 
 services:
+  mailcatcher:
+    image: schickling/mailcatcher
+    ports:
+      - "${HOST_SMTP_PORT:-1025}:1025"
   db:
     logging: *default-logging
     image: postgres:14-alpine
@@ -35,6 +39,7 @@ services:
     depends_on:
       - ui
       - api
+      - mailcatcher
     ports:
       - "80:80"
       - "443:443"
