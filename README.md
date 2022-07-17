@@ -53,11 +53,11 @@ npm run build:lib:watch
 ### Local Dev Services
 
 
-#### Mailcatcher
+#### mailhog
 
-For local development this startkit has a full mailcatcher instance setup in the docker compose stack.
+For local development this startkit has a full mailhog instance setup in the docker compose stack.
 
-Visit https://mail.result-app.local to use the mailcatcher UI.
+Visit https://mail.result-app.local to use the mailhog UI.
 
 To send mail from your host machine use `0.0.0.0:1025`.
 

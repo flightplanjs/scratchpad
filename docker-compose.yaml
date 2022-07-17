@@ -8,8 +8,8 @@ x-logging:
     max-file: 2
 
 services:
-  mailcatcher:
-    image: schickling/mailcatcher
+  mailhog:
+    image: mailhog/mailhog
     ports:
       - "${HOST_SMTP_PORT:-1025}:1025"
   db:
@@ -39,7 +39,7 @@ services:
     depends_on:
       - ui
       - api
-      - mailcatcher
+      - mailhog
     ports:
       - "80:80"
       - "443:443"
