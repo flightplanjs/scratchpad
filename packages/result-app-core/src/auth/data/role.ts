@@ -1,4 +1,4 @@
-import { IEntity, Sluggable } from '../data/entities';
+import { IEntity, Sluggable } from '../../data/entities';
 import { Permission } from './permission';
 
 export interface Role<T> extends IEntity<T>, Sluggable {

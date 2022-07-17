@@ -1,7 +1,6 @@
 import 'reflect-metadata';
 import { DataSource, DataSourceOptions } from 'typeorm';
 export * from './entities';
-import { User } from './entities';
 
 export const dataConfig: DataSourceOptions = {
   type: 'postgres',
@@ -12,7 +11,7 @@ export const dataConfig: DataSourceOptions = {
   database: process.env.DB_DATABASE ?? 'result-app',
   synchronize: true,
   logging: false,
-  entities: [User],
+  entities: [__dirname + '/entity/**/*{.ts,.js}'],
   migrations: ['migration/*.js'],
   subscribers: [],
 };

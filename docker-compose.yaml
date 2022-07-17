@@ -33,6 +33,8 @@ services:
       dockerfile: ./packages/result-app-nest/Dockerfile
     environment:
       SERVER_PORT: 3000
+      DB_HOST: db
+      MAIL_HOST: mailhog
   web:
     logging: *default-logging
     image: nginx

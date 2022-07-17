@@ -5,11 +5,12 @@ import {
   BeforeUpdate,
   BeforeInsert,
 } from 'typeorm';
+import { UserCredentialsEntity } from 'result-app-core/src/auth/data/user';
 
 import * as bcrypt from 'bcrypt';
 
 @Entity()
-export class User {
+export class User implements UserCredentialsEntity<number> {
   @PrimaryGeneratedColumn()
   id: number;
 
@@ -17,19 +18,18 @@ export class User {
   email: string;
 
   @Column()
-  protected password: string;
+  password: string;
 
   @BeforeUpdate()
   @BeforeInsert()
   protected async hashPassword() {
-    console.log('hashing');
-    try {
-      const rounds = bcrypt.getRounds(this.password);
-      if (rounds === 0) {
-        this.password = await bcrypt.hash(this.password, 10);
-      }
-    } catch (error) {
-      console.log(error);
+    console.log(this.password);
+
+    const rounds = this.password.match(/^\$2[a,b]\$\d+/)
+      ? bcrypt.getRounds(this.password)
+      : 0;
+
+    if (rounds === 0) {
       this.password = await bcrypt.hash(this.password, 10);
     }
   }

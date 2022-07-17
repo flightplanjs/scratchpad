@@ -1,4 +1,4 @@
-import { UserCredentialsEntity } from './user';
+import { UserCredentialsEntity } from '../data/user';
 
 export interface VerifiesEmailService<
   T,
