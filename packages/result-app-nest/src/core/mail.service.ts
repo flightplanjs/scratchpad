@@ -10,9 +10,9 @@ export class MailService {
 
   constructor(private configService: ConfigService) {
     this.transport = createTransport({
-      host: this.configService.get('MAIL_HOST', 'localhost'),
-      port: this.configService.get('MAIL_PORT', 1025),
-      ignoreTLS: !this.configService.get<boolean>('MAIL_TLS'),
+      host: this.configService.get('mail.host', 'localhost'),
+      port: this.configService.get('mail.port', 1025),
+      ignoreTLS: !this.configService.get<boolean>('mail.tls', false),
     });
   }
 

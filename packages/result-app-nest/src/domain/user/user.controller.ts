@@ -1,8 +1,8 @@
-import { Controller, Get, Post, Body, Inject, Module } from '@nestjs/common';
+import { Controller, Get, Post, Body, Module } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { User } from 'result-app-db';
 import { Repository } from 'typeorm';
-import { MailService } from '../../config/mail.service';
+import { MailService } from '../../core/mail.service';
 
 @Controller('users')
 @Module({

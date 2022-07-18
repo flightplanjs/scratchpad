@@ -1,8 +1,9 @@
 import 'reflect-metadata';
-import { DataSource, DataSourceOptions } from 'typeorm';
+import { DataSource } from 'typeorm';
+import { PostgresConnectionOptions } from 'typeorm/driver/postgres/PostgresConnectionOptions';
 export * from './entities';
 
-export const dataConfig: DataSourceOptions = {
+export const dataConfig: PostgresConnectionOptions = {
   type: 'postgres',
   host: process.env.DB_HOST ?? 'localhost',
   port: parseInt(process.env.DB_PORT) ?? 5433,
@@ -16,4 +17,4 @@ export const dataConfig: DataSourceOptions = {
   subscribers: [],
 };
 
-export const AppDataSource = new DataSource(dataConfig);
+export const getDataSource = () => new DataSource(dataConfig);
