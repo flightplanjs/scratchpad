@@ -12,7 +12,10 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@types/jsonwebtoken": "^8.5.8",
+    "jsonwebtoken": "^8.5.1"
+  },
   "devDependencies": {
     "@types/jest": "28.1.4",
     "@types/node": "^16.0.0",
