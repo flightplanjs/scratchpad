@@ -23,8 +23,6 @@ export class User implements UserCredentialsEntity<number> {
   @BeforeUpdate()
   @BeforeInsert()
   protected async hashPassword() {
-    console.log(this.password);
-
     const rounds = this.password.match(/^\$2[a,b]\$\d+/)
       ? bcrypt.getRounds(this.password)
       : 0;
